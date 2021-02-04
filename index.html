@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgAqua{
+            background-color: aqua;
+        }
+        #p1{
+            background-color:aquamarine !important;
+
+        }
+        input{
+            background-color: chartreuse;
+        }
+        div{
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            /*border: 1px solid blueviolet;*/
+            border-width: 1px;
+            border-style: solid;
+            border-color: blueviolet;
+            border-radius: 50%;
+            /*border-top-left-radius: 10px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 15px;*/
+        }
+    </style>
+    <script></script>
+    <script src="script.js"></script> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>hello world</h1>
+    <h2>hello world</h2>
+    <h3>hello world</h3>
+    <h4>hello world</h4>
+
+    <hr />
+    <a href="/html/index2.html">index2</a>
+    <p id="p1" class="bgAqua" style="background-color: chocolate;"> 
+        <u>ini <i>untuk</i> <b>paragraf</b></u>  
+    </p>
+    <p class="bgAqua">ini untuk paragraf 2</p>
+    <div>ini div1</div>
+    <div>ini div2</div>
+
+    <span>span 1</span>
+    <span>span 2</span>
+
+    <hr/>
+
+    <table border="1" width="50%">
+        <thead>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nunu</td>
+                <td rowspan="2" style="text-align: center;">Jakarta</td>
+            </tr>
+            <tr>
+                <td colspan="2">1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+    <br/>
+    <br/>
+    <form action="https:google.com" method="POST">
+        <label>Nama: </label><input type="text" maxlength="6" placeholder="Type Your Name"/>
+        <br />
+        <label>Password: </label><input type="password" />
+        <br />
+        <label>Umur: </label><input type="number" min="2" max="5" />
+        <br />
+        <label>Alamat: </label
+            ><textarea name="" id="" cols="10" rows="3"></textarea>
+
+        <br />
+        <input type="button" value="Reset">
+        <input type="submit" value="Simpan">
+        <button>Back</button>
+
+
+    </form>
+    <div style="height: 300px"></div>
+
+</body>
+</html>

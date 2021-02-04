@@ -1,0 +1,60 @@
+        body {
+            background-color: darkgray;
+        }
+        table{
+            border: 1;
+            width: 90%;
+            font-size: medium;
+            font-family: cursive;
+            font-style: inherit;
+            margin-left: 3%;
+            width: 95%;
+        }
+        .img{
+            margin: 24px 0 12px 0;
+            width: 27%;
+            border-radius: 50%;
+            margin-left: 35%;
+        }
+        .kontak{
+            width: 40%;
+            margin-top: 3%;
+            border-style: solid;
+            margin-left: 50%;
+            border-color: burlywood;
+            padding: 10px;
+        }
+        .nama{
+            width: 40%;
+            height: auto;
+            margin-left: 13%;
+        }
+        .sekolah{
+            width: 40%;
+            height: auto;
+            margin-left: 40px;
+        }
+        .keterangan{
+            width: 70%;
+            height: auto;
+            margin-left: 15%;
+            margin-top: 5%;
+            border-style: solid;
+            border-color: blueviolet;
+            padding-left: 10%;
+            font-size: large;
+            font-family: cursive;
+            
+        }
+        .container1{
+            display: flex;
+            flex-direction: row;
+        }
+        .container{
+            width: 70%;
+            height: 80%;
+            margin-left: 15%;
+            font-family: Arial;
+            background-size: cover;
+            background-image: url("Background4.jpg");
+        }
