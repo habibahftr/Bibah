@@ -12,6 +12,9 @@
             background-color:aquamarine !important;
 
         }
+        .textBold{
+            font-weight: bold;
+        }
         input{
             background-color: chartreuse;
         }
@@ -31,13 +34,18 @@
             border-bottom-right-radius: 15px;*/
         }
     </style>
-    <script></script>
-    <script src="script.js"></script> 
+    <script>
+        const h11= document.querySelector("#h1");
+        console.log("head: ", h11)
+    </script>
+
+    <script src="script.js" defer></script> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hello world</h1>
+    <h1 id="h1">hello world</h1>
     <h2>hello world</h2>
+    <button type="button" onclick="myFunction()">Try it</button>
     <h3>hello world</h3>
     <h4>hello world</h4>
 
@@ -46,7 +54,7 @@
     <p id="p1" class="bgAqua" style="background-color: chocolate;"> 
         <u>ini <i>untuk</i> <b>paragraf</b></u>  
     </p>
-    <p class="bgAqua">ini untuk paragraf 2</p>
+    <p id="p1" bebas="suka2" class="bgAqua">ini untuk paragraf 2</p>
     <div>ini div1</div>
     <div>ini div2</div>
 
@@ -94,6 +102,13 @@
 
     </form>
     <div style="height: 300px"></div>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Paragraf change.";
+        }
+        const h10= document.querySelector("#h1");
+        console.log("head: ", h10)
+    </script>
 
 </body>
 </html>
