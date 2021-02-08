@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tabel.css">
+    <script src="script.js" defer></script> 
+
+</head>
+<body>
+    <div class="containerAtas">
+        <div class = "container">
+         <p style= "font-family: math;">INPUT DATA DIRI</p>
+            <div class="form">
+                <div class="field">
+                   <label class="label" for="nama">Nama: </label>
+                    <input class="inputNama" type="text" id="nama" placeholder="Tulis nama Anda">
+                </div>
+                <div class="field">
+                    <label class="label" for="ttl">TTL: </label>
+                    <input class= "inputNama" style="width: 40%;" type="text" id="tempat" placeholder="Tulis tempat lahir Anda ">
+                    <input class="ttl" type="date" id="ttl">
+                </div>
+                <div class="field">
+                    <div>Jenis Kelamin</div>
+                        <input type="radio" name='jeniskelamin' id='jeniskelamin' value='Pria'/> Pria
+                        <input type="radio" name='jeniskelamin' id='jeniskelamin' value='Wanita'/>Wanita
+                </div>
+                <div class="field">
+                    <div>Hobby</div>
+                    <input type='checkbox' class="hobby"  value='Berenang' />Berenang
+                    <input type='checkbox' class="hobby"  value='Jogging' />Jogging
+                    <input type='checkbox' class="hobby"  value='Bersepeda' />Bersepeda
+                    <input type='checkbox' class="hobby"  value='Futsal' />Futsal
+                </div>
+                <div class="field">
+                    <div>Agama</div>
+                        <select id="agama" name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                </div>
+                <div class="field">
+                   <label class="label" for="alamat">Alamat: </label>
+                   <textarea id="alamat" cols="45" rows="8" placeholder="Tulis alamat Anda "></textarea>
+                </div>
+
+            </div>
+          <button class="button" id= "button" onclick="validateData()">Submit</button>
+        </div>
+
+        
+        <div class="container1">
+            <h3>Search</h3>
+        <input type="text" name="myInput" id="myInput" onkeyup="searchName()" placeholder="Search for names..">
+
+
+            <div>
+                <table id="table" cellspasing="0" border="1">
+                    <tr style="background-color: aquamarine">
+                    <th class="tNumber">No</th>
+                    <th class="tText">Nama</th>
+                    <th class="tText">Umur</th>
+                    <th class="tText">Jenis Kelamin</th>
+                    <th class="tText">Hobby</th>
+                    <th class="tText">Agama</th>
+                    <th class="tText">Alamat</th> 
+                    <th class="tAction">Action</th>
+                    </tr>
+                    <tbody id="bodyTable" style="text-align: center"></tbody>
+                </table>
+            </div>
+
+            <div id="page">
+                
+            </div>
+        </div>
+    </div>
+
+  
+    
+</body>
+</html>
