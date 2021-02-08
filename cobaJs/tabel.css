@@ -25,18 +25,21 @@ body{
  }
  
  .container1 {
-    /* overflow: scroll; */
     width: 70%;
-    height: 60vh;
     margin-top: 10vh;
     margin-left: 10vh;
     background-color: #ffecd9;
  }
  table{
-     margin: auto;
+   margin: auto;
+   font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-sizing: border-box;
  }
- .tText{
-    width: 35%;
+ table td, table th{
+   border: 1px solid rgb(7, 7, 7);
+   padding: 8px;
  }
  .inputNama{
     width: 89%;
@@ -48,3 +51,10 @@ body{
 .button{
     margin-bottom: 10vh;
 }
+#page a {
+   color: black;
+   float: left;
+   padding: 8px 16px;
+   border: 1px solid #ddd;
+ }
+ 

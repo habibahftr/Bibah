@@ -12,6 +12,7 @@ var updatedIndex = -1;
 let limit = 4;
 let currentPage = 1;
 const page = document.querySelector('#page');
+
 let people = [{
         no: nomor++,
         nama: "lulu",
@@ -58,7 +59,7 @@ let people = [{
     },
     {
         no: nomor++,
-        nama: "Lele",
+        nama: "Nana",
         tempat: "Bandung",
         tgl: "1995-01-01",
         age: getAge("1995-01-01"),
@@ -66,6 +67,28 @@ let people = [{
         hobby: "Jogging",
         agama: "Hindu",
         alamat: "Roma"
+    },
+    {
+        no: nomor++,
+        nama: "Nunu",
+        tempat: "Bandung",
+        tgl: "1994-08-08",
+        age: getAge("1995-08-08"),
+        jenisKelamin: "Pria",
+        hobby: "Jogging",
+        agama: "Budha",
+        alamat: "Paris"
+    },
+    {
+        no: nomor++,
+        nama: "Nuni",
+        tempat: "Bandung",
+        tgl: "1998-09-09",
+        age: getAge("1998-09-09"),
+        jenisKelamin: "Wanita",
+        hobby: "Futsal",
+        agama: "Kristen",
+        alamat: "Tokyo"
     }
 ];
 
@@ -137,7 +160,7 @@ function inputPerson() {
 }
 
 function showData() {
-    let endPage = currentPage * limit;
+    let endPage = currentPage * limit; // 1*4
     let offSet = endPage - limit; //startnya darimana
     hasil.innerHTML = ''
     for (let index = offSet; index < endPage; index++) {
@@ -152,16 +175,13 @@ function showData() {
              <td style="tdCenter">${people[index].agama}</td>
              <td style="tdCenter">${people[index].alamat}</td>
              <td class="tdAction">
-                <button class="button" type="button" onclick="deleteClicked(${people[index].no}">Delete</button>
+                <button class="button" type="button" onclick="deleteClicked(${people[index].no})">Delete</button>
                 <button class="button" type="button" onclick="updateClicked(${people[index].no})">Update</button>
              </td>
             </tr>
              `
         }
     }
-    // people.forEach((person, index) => {
-    //     // console.log(person);
-    // })
     pagination()
 }
 
@@ -169,8 +189,6 @@ showData();
 
 
 function validateData() {
-    console.log(jenisKelamin);
-
     if (nama.value.length > 0 && alamat.value.length > 0) {
         if (button.innerHTML == "Submit") {
             console.log("Sumbit");
@@ -188,8 +206,11 @@ function validateData() {
 }
 
 function deleteClicked(no) {
-    if (confirm(`Apakah Anda yakin ingin menghapus data ${people[no].nama}`)) {
-        people.splice(no, 1);
+    const index = people.findIndex(function (ini) {
+        return ini.no === no;
+    })
+    if (confirm(`Apakah Anda yakin ingin menghapus data ${people[index].nama}`)) {
+        people.splice(index, 1);
     }
     showData();
 }
@@ -201,7 +222,6 @@ function updateClicked(no) {
     })
     updatedIndex = index;
     button.innerHTML = "Update";
-    // nomor.value = people[index]+1;
     nama.value = people[index].nama;
     tempat.value = people[index].tempat;
     tgl.value = people[index].tgl;
@@ -235,7 +255,7 @@ function updatePerson() {
         nama: namaUser.value,
         tempat: tempat.value,
         tgl: tgl.value,
-        age: getAge(),
+        age: getAge(tgl.value),
         jenisKelamin: jk,
         hobby: hobbyList.join(", "),
         agama: agama.value,
@@ -292,17 +312,11 @@ function pagination() {
             page.innerHTML += `
         <a href="javascript:void(0)">${index}</a> 
         `
-        } else if (index > currentPage) {
+        } else {
             page.innerHTML += `
             <a href="javascript:void(0)" onclick="clickedPage(${index})">${index}</a> 
             `
-        } else if (index < currentPage) {
-            page.innerHTML += `
-        <a href="javascript:void(0)" onclick="clickedPage(${index})">${index}</a> 
-        `
         }
-
-        // const element = array[index];
         // javascript:void(0) agar membatalkan link
 
     }
